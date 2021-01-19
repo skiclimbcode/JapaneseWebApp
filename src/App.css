@@ -44,3 +44,8 @@
 .mistakes-color {
   color: red;
 }
+
+.inline {
+  display: inline;
+  color: white;
+}
