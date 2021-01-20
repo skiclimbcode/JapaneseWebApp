@@ -58,9 +58,9 @@ export default function Guesser(props) {
         <div>
             <img src={currentImage.location} className="App-logo" alt="Character would go here" />
             <div>
-              Correct:
+              Left:
               <div className="correct-color">
-                {correctGuesses} <div className="inline">/ {props.charactersLength}</div>
+                {props.charactersLength - correctGuesses}
               </div>
             </div>
             <div>
@@ -78,7 +78,7 @@ export default function Guesser(props) {
             <Container>
               <Row>
                 <Col xs={12} md={6}><Button variant="danger" onClick={restart}>Restart</Button></Col>
-                <Col xs={12} md={6}><Button variant="secondary" onClick={pause}>Pause</Button></Col>
+                {/* <Col xs={12} md={6}><Button variant="secondary" onClick={pause}>Pause</Button></Col> */}
               </Row>
             </Container>
         </div>
