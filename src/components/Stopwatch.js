@@ -5,7 +5,6 @@ function Stopwatch(props) {
     const [stopwatch, setStopwatch] = useState('00:00:00')
 
     useEffect(() => {
-        //
         return () => {
             clearInterval()
         }
@@ -35,7 +34,6 @@ function Stopwatch(props) {
 
     return (
     <div>
-        <Button onClick={start}>Start Timer</Button>
         <div>{stopwatch}</div>
     </div>
     )
