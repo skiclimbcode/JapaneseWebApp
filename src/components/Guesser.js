@@ -12,13 +12,14 @@ export default function Guesser(props) {
     const [guess, setGuess] = useState('')
     const [mistakes, setMistakes] = useStateWithCallbackLazy(0)
     const [correctGuesses, setCorrectGuesses] = useStateWithCallbackLazy(0)
+    const [paused, setPaused] = useState(false)
 
     const submitGuess = (event) => {
         event.preventDefault();
         setGuess(event.target.value)
         if (sanitize(guess) === sanitize(currentImage.name)) {
+          props.endTime(Date.now())
           setCorrectGuesses(old => ++old, c => {
-            console.log('correct in Guesser.js:', c)
             props.updateCorrectGuesses(c)
             props.setRandomImage()
           })
@@ -39,7 +40,13 @@ export default function Guesser(props) {
     }
 
     const pause = () => {
+      setPaused(true)
       props.pauseGame()
+    }
+
+    const resume = () => {
+      setPaused(false)
+      props.resumeGame()
     }
 
     const clear = () => {
@@ -48,6 +55,7 @@ export default function Guesser(props) {
         setGuess('')
         setCorrectGuesses(0)
         setMistakes(0)
+        setPaused(false)
     }
 
     const sanitize = (s) => {
@@ -69,16 +77,18 @@ export default function Guesser(props) {
                 {mistakes}
               </div>
             </div>
-            <Form onSubmit={submitGuess}>
+            <Form onSubmit={submitGuess} disabled={paused}>
               <Form.Group controlId="formGuess">
                 <Form.Label>Romaji</Form.Label>
-                <Form.Control type="text" placeholder="Enter Guess" value={guess} onChange={handleChange} autoFocus></Form.Control>
+                <Form.Control disabled={paused} type="text" placeholder="Enter Guess" value={guess} onChange={handleChange} autoFocus></Form.Control>
               </Form.Group>
             </Form>
             <Container>
               <Row>
+                { paused && <Col xs={12}><h1>Paused!</h1></Col> }
                 <Col xs={12} md={6}><Button variant="danger" onClick={restart}>Restart</Button></Col>
-                {/* <Col xs={12} md={6}><Button variant="secondary" onClick={pause}>Pause</Button></Col> */}
+                { !paused && <Col xs={12} md={6}><Button variant="secondary" onClick={pause}>Pause</Button></Col> }
+                { paused &&  <Col xs={12} md={6}><Button variant="primary" onClick={resume}>Resume</Button></Col> }
               </Row>
             </Container>
         </div>

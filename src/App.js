@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
+import { useStateWithCallbackLazy } from 'use-state-with-callback'
 import Button from 'react-bootstrap/Button'
 import Guesser from './components/Guesser'
-import Stopwatch from './components/Stopwatch'
 import CountdownOverlay from './components/CountdownOverlay'
 import Finish from './components/Finish';
 
@@ -17,6 +17,11 @@ function App() {
   const [blacklist, setBlacklist] = useState([])
   const [correctGuesses, setCorrectGuesses] = useState(0)
   const [mistakes, setMistakes] = useState(0)
+  const [guessTimes, setGuessTimes] = useState([])
+  const [startTime, setStartTime] = useState(0)
+  const [endTime, setEndTime] = useStateWithCallbackLazy(0)
+  const [pauseStartTime, setPauseStartTime] = useState(0)
+  const [pauseEndTime, setPauseEndTime] = useState(0)
 
   const getCharacters = () => {
     fetch(`${characterSetName.toLowerCase()}.json`, {
@@ -51,10 +56,11 @@ function App() {
     setBlacklist([])
     setCorrectGuesses(0)
     setMistakes(0)
-  }
-
-  const pauseGame = () => {
-
+    setGuessTimes([])
+    setStartTime(0)
+    setEndTime(0)
+    setPauseStartTime(0)
+    setPauseEndTime(0)
   }
 
   const removeCountdown = () => {
@@ -63,7 +69,7 @@ function App() {
   }
 
   const setRandomImage = () => {
-    console.log('blacklist:', blacklist)
+    setStartTime(Date.now())
     if (guessHistory.length === characters.length) {
       setGameOver(true)
       return
@@ -88,12 +94,27 @@ function App() {
   }
 
   const updateCorrectGuesses = (correct) => {
-    console.log('correct in App.js:', correct)
     setCorrectGuesses(correct)
   }
 
   const updateMistakes = (mistakes) => {
     setMistakes(mistakes)
+  }
+
+  const updateEndTime = (end) => {
+    setEndTime(end, e => {
+      const pauseLength = pauseEndTime - pauseStartTime
+      console.log('pauseLength:', pauseLength)
+      setGuessTimes(old => [...old, (e - startTime) - pauseLength])
+    })
+  }
+
+  const pauseGame  = () => {
+    setPauseStartTime(Date.now())
+  }
+
+  const resumeGame = () => {
+    setPauseEndTime(Date.now())
   }
 
   return (
@@ -106,13 +127,17 @@ function App() {
             <Guesser character={currentImage}
               restart={restart}
               pauseGame={pauseGame}
+              resumeGame={resumeGame}
               setRandomImage={setRandomImage}
               charactersLength={characters.length}
               updateCorrectGuesses={updateCorrectGuesses}
-              updateMistakes={updateMistakes} />}
+              updateMistakes={updateMistakes}
+              endTime={updateEndTime} />}
         { gameOver && <Finish restart={restart}
                               correct={correctGuesses}
-                              mistakes={mistakes} /> }
+                              mistakes={mistakes}
+                              guessTimes={guessTimes}
+                              pauseLength={pauseEndTime - pauseStartTime} /> }
       </header>
     </div>
   );
