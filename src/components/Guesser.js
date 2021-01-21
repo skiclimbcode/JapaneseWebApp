@@ -64,6 +64,7 @@ export default function Guesser(props) {
 
     return (
         <div>
+                { paused && <Container><Row><Col xs={12}><h1>Paused!</h1></Col><Col xs={12}>No cheating!</Col></Row></Container> }
             <img src={currentImage.location} className="App-logo" alt="Character would go here" />
             <div>
               Left:
@@ -85,7 +86,6 @@ export default function Guesser(props) {
             </Form>
             <Container>
               <Row>
-                { paused && <Row><Col xs={12}><h1>Paused!</h1></Col><Col xs={12}>Timer is paused too... No cheating!</Col></Row> }
                 <Col xs={12} md={6}><Button variant="danger" onClick={restart}>Restart</Button></Col>
                 { !paused && <Col xs={12} md={6}><Button variant="secondary" onClick={pause}>Pause</Button></Col> }
                 { paused &&  <Col xs={12} md={6}><Button variant="primary" onClick={resume}>Resume</Button></Col> }
