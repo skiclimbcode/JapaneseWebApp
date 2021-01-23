@@ -15,28 +15,28 @@ export default function Guesser(props) {
     const [paused, setPaused] = useState(false)
 
     const submitGuess = (event) => {
-        event.preventDefault();
-        setGuess(event.target.value)
-        if (sanitize(guess) === sanitize(currentImage.name)) {
-          props.endTime(Date.now())
-          setCorrectGuesses(old => ++old, c => {
-            props.updateCorrectGuesses(c)
-            props.setRandomImage()
-          })
-        } else {
-          setMistakes(old => ++old, m => {
-            props.updateMistakes(m)
-          })
-        }
-        setGuess('')
+      event.preventDefault();
+      setGuess(event.target.value)
+      if (sanitize(guess) === sanitize(currentImage.name)) {
+        props.endTime(Date.now())
+        setCorrectGuesses(old => ++old, c => {
+          props.updateCorrectGuesses(c)
+          props.setRandomImage()
+        })
+      } else {
+        setMistakes(old => ++old, m => {
+          props.updateMistakes(m)
+        })
       }
+      setGuess('')
+    }
 
     const handleChange = (event) => {
-        setGuess(event.target.value)
+      setGuess(event.target.value)
     }
 
     const restart = () => {
-        clear()
+      clear()
     }
 
     const pause = () => {
@@ -50,12 +50,12 @@ export default function Guesser(props) {
     }
 
     const clear = () => {
-        props.restart()
-        currentImage = {}
-        setGuess('')
-        setCorrectGuesses(0)
-        setMistakes(0)
-        setPaused(false)
+      props.restart()
+      currentImage = {}
+      setGuess('')
+      setCorrectGuesses(0)
+      setMistakes(0)
+      setPaused(false)
     }
 
     const sanitize = (s) => {
@@ -88,7 +88,7 @@ export default function Guesser(props) {
             </Form>
             <Container>
               <Row>
-                <Col xs={12} md={6}><Button bsClass="restart-button" onClick={restart}>Restart</Button></Col>
+                <Col xs={12} md={6}><Button onClick={restart}>Restart</Button></Col>
                 { !paused && <Col xs={12} md={6}><Button variant="secondary" onClick={pause}>Pause</Button></Col> }
                 { paused &&  <Col xs={12} md={6}><Button variant="primary" onClick={resume}>Resume</Button></Col> }
               </Row>

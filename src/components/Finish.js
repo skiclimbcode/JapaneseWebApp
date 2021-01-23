@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 export default function Finish(props) {
-
+    console.log('guessTimes:', props.guessTimes)
     const roundOff = (num, places) => {
         const x = Math.pow(10,places);
         return Math.round(num * x) / x;
