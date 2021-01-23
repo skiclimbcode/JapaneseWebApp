@@ -120,7 +120,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        { !gameOver && !startGuessing && !startCountdown && <Button variant="primary" onClick={startGame}>Start Quiz</Button> }
+        { !gameOver && !startGuessing && !startCountdown && <Button variant="primary" onClick={startGame}>Start Hiragana Quiz</Button> }
         
         { !gameOver && startCountdown && <CountdownOverlay removeCountdown={removeCountdown}/> }
         { !gameOver && startGuessing && 
