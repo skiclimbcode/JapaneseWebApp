@@ -9,15 +9,3 @@
   .inline {
     display: inline;
   }
-
-  .left-align {
-      text-align: left;
-  }
-
-  .right-align {
-      text-align: right;
-  }
-
-  .label-size {
-    font-size: calc(5px + 1vmin);
-  }
