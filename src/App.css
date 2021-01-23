@@ -1,4 +1,10 @@
-.App {
+/* Color Palette: https://colorhunt.co/palette/167893
+    #1b262c
+    #0f4c75
+    #3282b8
+    #bbe1fa */
+
+.App-center {
   text-align: center;
 }
 
@@ -7,14 +13,8 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    /* animation: App-logo-spin infinite 20s linear; */
-  }
-}
-
-.App-header {
-  background-color: #b8b8b8; /* #b8b8b8*/
+.App-content {
+  background-color: #1b262c; /* #b8b8b8*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,6 +23,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.content-font-size {
+  font-size: calc(5px + 2vmin);
+}
+
+/* .start-button {
+  align-self: center;
+} */
 
 .App-link {
   color: #61dafb;
@@ -37,15 +45,23 @@
   }
 }
 
-.correct-color {
-  color: green;
+.invert-image {
+  -webkit-filter: grayscale(1) invert(1);
+  filter: grayscale(1) invert(1);
 }
 
-.mistakes-color {
-  color: red;
+.btn-primary {
+  background-color: #bbe1fa !important;
+  color: #1b262c !important;
+  font-weight: bold !important;
+  border-color: #bbe1fa !important;
 }
 
-.inline {
-  display: inline;
-  color: white;
+.btn-primary:hover {
+  background-color: #bbe1fac2 !important;
+  border-color: #bbe1fac2 !important;
+}
+
+.btn-secondary {
+  font-weight: bold !important;
 }

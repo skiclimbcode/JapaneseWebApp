@@ -65,28 +65,30 @@ export default function Guesser(props) {
     return (
         <div>
                 { paused && <Container><Row><Col xs={12}><h1>Paused!</h1></Col><Col xs={12}>No cheating!</Col></Row></Container> }
-            <img src={currentImage.location} className="App-logo" alt="Character would go here" />
-            <div>
-              Left:
-              <div className="correct-color">
-                {props.charactersLength - correctGuesses}
+            <img src={currentImage.location} className="App-logo invert-image" alt="Character would go here" />
+            <Container>
+              <div className="content-font-size">
+                <Row>
+                  <Col className="left-align" xs={12} sm={6}>Left:</Col>
+                  <Col className="right-align" xs={12} sm={6}><div className="inline correct-color">{props.charactersLength - correctGuesses}</div></Col>
+                </Row>
               </div>
-            </div>
-            <div>
-              Mistakes: 
-              <div className="mistakes-color">
-                {mistakes}
+              <div className="content-font-size">
+                <Row>
+                  <Col className="left-align" xs={12} sm={6}>Mistakes:</Col>
+                  <Col className="right-align" xs={12} sm={6}><div className="inline mistakes-color">{mistakes}</div></Col>
+                </Row>
               </div>
-            </div>
+            </Container>
             <Form onSubmit={submitGuess} disabled={paused}>
-              <Form.Group controlId="formGuess">
-                <Form.Label>Romaji</Form.Label>
+              <Form.Group controlId="formGuess" className="left-align">
+                <Form.Label className="label-size">Romaji</Form.Label>
                 <Form.Control disabled={paused} type="text" placeholder="Enter Guess" value={guess} onChange={handleChange} autoFocus></Form.Control>
               </Form.Group>
             </Form>
             <Container>
               <Row>
-                <Col xs={12} md={6}><Button variant="danger" onClick={restart}>Restart</Button></Col>
+                <Col xs={12} md={6}><Button bsClass="restart-button" onClick={restart}>Restart</Button></Col>
                 { !paused && <Col xs={12} md={6}><Button variant="secondary" onClick={pause}>Pause</Button></Col> }
                 { paused &&  <Col xs={12} md={6}><Button variant="primary" onClick={resume}>Resume</Button></Col> }
               </Row>

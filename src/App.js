@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button'
 import Guesser from './components/Guesser'
 import CountdownOverlay from './components/CountdownOverlay'
 import Finish from './components/Finish';
+import AppNavbar from './components/AppNavbar';
 
 function App() {
   const characterSetName = 'hiragana'
@@ -37,7 +38,7 @@ function App() {
   }
 
   useEffect(() => {
-    if (characters.length == 0) {
+    if (characters.length === 0) {
       getCharacters()
     }
   }, [])
@@ -118,9 +119,10 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        { !gameOver && !startGuessing && !startCountdown && <Button variant="primary" onClick={startGame}>Start Hiragana Quiz</Button> }
+    <div className="App-center">
+      <AppNavbar />
+      <div className="App-content">
+        { !gameOver && !startGuessing && !startCountdown && <Button variant="primary" className="start-button" onClick={startGame}>Start Hiragana Quiz</Button> }
         
         { !gameOver && startCountdown && <CountdownOverlay removeCountdown={removeCountdown}/> }
         { !gameOver && startGuessing && 
@@ -138,7 +140,7 @@ function App() {
                               mistakes={mistakes}
                               guessTimes={guessTimes}
                               pauseLength={pauseEndTime - pauseStartTime} /> }
-      </header>
+      </div>
     </div>
   );
 }
