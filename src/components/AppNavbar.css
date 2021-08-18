@@ -1,0 +1,13 @@
+.remove-link-dec {
+    text-decoration: none;
+    color: white
+}
+
+.remove-link-dec:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+.cursor-pointer:hover {
+    cursor: pointer;
+}
