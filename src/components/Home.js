@@ -13,10 +13,10 @@ function Home() {
             </Card.Text>
             <Container>
                 <Row>
-                    <Col xs={12} md={6} className="text-center">
+                    <Col xs={6} className="text-center">
                         <Link to="/hiragana" className="remove-link-dec"><Button variant="primary">Hiragana</Button></Link>
                     </Col>
-                    <Col xs={12} md={6} className="text-center">
+                    <Col xs={6} className="text-center">
                         <Link to="katakana" className="remove-link-dec"><Button variant="primary">Katakana</Button></Link>
                     </Col>
                 </Row>

@@ -8,6 +8,8 @@ body {
 }
 
 .center-parent {
+  /* margin-top: 33px; */
+  padding-top: 33px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,9 +19,25 @@ body {
 
 .center-content {
   max-width: 75%;
+  max-height: 90%;
+  border: 1px solid rgba(0,0,0,.125) !important;
 }
 
-.invert-image {
-  -webkit-filter: grayscale(1) invert(1);
-  filter: grayscale(1) invert(1);
+@media (prefers-color-scheme: dark) {
+  .invert-image {
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .invert-image {
+    -webkit-filter: grayscale(0) invert(0);
+    filter: grayscale(0) invert(0);
+  }
+}
+
+.card-footer {
+	background-color: rgba(0, 0, 0, 0.03);
+	border-top-color: rgba(140, 130, 115, 0.13);
 }
