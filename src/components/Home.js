@@ -8,7 +8,7 @@ function Home() {
             <Card.Title>Learn Japanese!</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">Practice your Hiragana and Katakana skills</Card.Subtitle>
             <Card.Text>
-                With this web app you can practice your Hiragana and Katakana syllabaries.<br />
+                With this web app you can practice the Hiragana and Katakana syllabaries.<br />
                 Just click on the syllabary you'd like to practice!
             </Card.Text>
             <Container>
