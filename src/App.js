@@ -12,14 +12,18 @@ function App() {
     <Router>
       <AppNavbar />
 
-      <Switch>
-        <div className="center-parent">
-          <Card className="center-content" text="light" bg="dark" border="dark">
+      <div className="center-parent">
+        <Card className="center-content" text="light" bg="dark" border="dark">
+          <Switch>
+            <Route path="/quiz">
+              <Quiz />
+            </Route>
+
             <Route path="/hiragana">
-              <Quiz syllabary="Hiragana" />
+              {/* <Quiz syllabary="Hiragana" /> */}
             </Route>
             <Route path="/katakana">
-              <Quiz syllabary="Katakana" />
+              {/* <Quiz syllabary="Katakana" /> */}
             </Route>
             <Route path="/finish">
               <Finish />
@@ -27,9 +31,9 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-          </Card>
-        </div>
-      </Switch>
+          </Switch>
+        </Card>
+      </div>
     </Router>
   );
 }

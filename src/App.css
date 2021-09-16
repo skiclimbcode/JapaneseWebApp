@@ -41,3 +41,13 @@ body {
 	background-color: rgba(0, 0, 0, 0.03);
 	border-top-color: rgba(140, 130, 115, 0.13);
 }
+
+.correct-color {
+  color: rgb(0, 255, 0);
+  font-weight: bold;
+}
+
+.wrong-color {
+  font-weight: bold;
+  color: red;
+}

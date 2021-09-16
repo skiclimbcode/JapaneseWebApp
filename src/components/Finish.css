@@ -1,0 +1,11 @@
+.justify-content-xs-center {
+	justify-content: center !important;
+}
+
+.pull-right {
+	display: flex;
+}
+
+.pull-right-item {
+	align-self: flex-end;
+}

@@ -1,0 +1,1250 @@
+[
+    {
+        "name": "a",
+        "location": "hiragana-character-set/a.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ba",
+        "location": "hiragana-character-set/ba.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "be",
+        "location": "hiragana-character-set/be.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "bi",
+        "location": "hiragana-character-set/bi.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "bo",
+        "location": "hiragana-character-set/bo.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "bu",
+        "location": "hiragana-character-set/bu.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "bya",
+        "location": "hiragana-character-set/bya.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "byo",
+        "location": "hiragana-character-set/byo.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "byu",
+        "location": "hiragana-character-set/byu.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "cha",
+        "location": "hiragana-character-set/cha.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "chi",
+        "location": "hiragana-character-set/chi.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "cho",
+        "location": "hiragana-character-set/cho.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "chu",
+        "location": "hiragana-character-set/chu.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "da",
+        "location": "hiragana-character-set/da.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "de",
+        "location": "hiragana-character-set/de.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "do",
+        "location": "hiragana-character-set/do.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "e",
+        "location": "hiragana-character-set/e.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "fu",
+        "location": "hiragana-character-set/fu.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ga",
+        "location": "hiragana-character-set/ga.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ge",
+        "location": "hiragana-character-set/ge.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "gi",
+        "location": "hiragana-character-set/gi.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "go",
+        "location": "hiragana-character-set/go.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "gu",
+        "location": "hiragana-character-set/gu.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "gya",
+        "location": "hiragana-character-set/gya.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "gyo",
+        "location": "hiragana-character-set/gyo.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "gyu",
+        "location": "hiragana-character-set/gyu.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ha",
+        "location": "hiragana-character-set/ha.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "he",
+        "location": "hiragana-character-set/he.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "hi",
+        "location": "hiragana-character-set/hi.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ho",
+        "location": "hiragana-character-set/ho.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "hya",
+        "location": "hiragana-character-set/hya.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "hyo",
+        "location": "hiragana-character-set/hyo.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "hyu",
+        "location": "hiragana-character-set/hyu.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "i",
+        "location": "hiragana-character-set/i.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ja",
+        "location": "hiragana-character-set/ja.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ji",
+        "location": "hiragana-character-set/ji.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ji2",
+        "location": "hiragana-character-set/ji2.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "jo",
+        "location": "hiragana-character-set/jo.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ju",
+        "location": "hiragana-character-set/ju.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ka",
+        "location": "hiragana-character-set/ka.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ke",
+        "location": "hiragana-character-set/ke.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ki",
+        "location": "hiragana-character-set/ki.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ko",
+        "location": "hiragana-character-set/ko.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ku",
+        "location": "hiragana-character-set/ku.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "kya",
+        "location": "hiragana-character-set/kya.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "kyo",
+        "location": "hiragana-character-set/kyo.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "kyu",
+        "location": "hiragana-character-set/kyu.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ma",
+        "location": "hiragana-character-set/ma.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "me",
+        "location": "hiragana-character-set/me.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "mi",
+        "location": "hiragana-character-set/mi.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "mo",
+        "location": "hiragana-character-set/mo.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "mu",
+        "location": "hiragana-character-set/mu.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "mya",
+        "location": "hiragana-character-set/mya.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "myo",
+        "location": "hiragana-character-set/myo.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "myu",
+        "location": "hiragana-character-set/myu.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "n",
+        "location": "hiragana-character-set/n.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "na",
+        "location": "hiragana-character-set/na.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ne",
+        "location": "hiragana-character-set/ne.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ni",
+        "location": "hiragana-character-set/ni.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "no",
+        "location": "hiragana-character-set/no.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "nu",
+        "location": "hiragana-character-set/nu.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "nya",
+        "location": "hiragana-character-set/nya.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "nyo",
+        "location": "hiragana-character-set/nyo.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "nyu",
+        "location": "hiragana-character-set/nyu.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "o",
+        "location": "hiragana-character-set/o.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "pa",
+        "location": "hiragana-character-set/pa.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "pe",
+        "location": "hiragana-character-set/pe.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "pi",
+        "location": "hiragana-character-set/pi.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "po",
+        "location": "hiragana-character-set/po.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "pu",
+        "location": "hiragana-character-set/pu.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "pya",
+        "location": "hiragana-character-set/pya.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "pyo",
+        "location": "hiragana-character-set/pyo.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "pyu",
+        "location": "hiragana-character-set/pyu.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ra",
+        "location": "hiragana-character-set/ra.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "re",
+        "location": "hiragana-character-set/re.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ri",
+        "location": "hiragana-character-set/ri.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ro",
+        "location": "hiragana-character-set/ro.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ru",
+        "location": "hiragana-character-set/ru.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "rya",
+        "location": "hiragana-character-set/rya.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ryo",
+        "location": "hiragana-character-set/ryo.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ryu",
+        "location": "hiragana-character-set/ryu.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "sa",
+        "location": "hiragana-character-set/sa.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "se",
+        "location": "hiragana-character-set/se.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "sha",
+        "location": "hiragana-character-set/sha.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "shi",
+        "location": "hiragana-character-set/shi.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "sho",
+        "location": "hiragana-character-set/sho.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "shu",
+        "location": "hiragana-character-set/shu.png",
+		"category": "combinations",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "so",
+        "location": "hiragana-character-set/so.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "su",
+        "location": "hiragana-character-set/su.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ta",
+        "location": "hiragana-character-set/ta.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "te",
+        "location": "hiragana-character-set/te.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "to",
+        "location": "hiragana-character-set/to.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "tsu",
+        "location": "hiragana-character-set/tsu.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "u",
+        "location": "hiragana-character-set/u.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "wa",
+        "location": "hiragana-character-set/wa.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "wo",
+        "location": "hiragana-character-set/wo.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ya",
+        "location": "hiragana-character-set/ya.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "yo",
+        "location": "hiragana-character-set/yo.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "yu",
+        "location": "hiragana-character-set/yu.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "za",
+        "location": "hiragana-character-set/za.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "ze",
+        "location": "hiragana-character-set/ze.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "zo",
+        "location": "hiragana-character-set/zo.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "zu",
+        "location": "hiragana-character-set/zu.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "zu2",
+        "location": "hiragana-character-set/zu2.png",
+		"category": "standard",
+        "syllabary": "hiragana"
+    },
+    {
+        "name": "a",
+        "location": "katakana-character-set/a.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ba",
+        "location": "katakana-character-set/ba.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "be",
+        "location": "katakana-character-set/be.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "bi",
+        "location": "katakana-character-set/bi.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "bo",
+        "location": "katakana-character-set/bo.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "bu",
+        "location": "katakana-character-set/bu.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "bya",
+        "location": "katakana-character-set/bya.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "byo",
+        "location": "katakana-character-set/byo.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "byu",
+        "location": "katakana-character-set/byu.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "cha",
+        "location": "katakana-character-set/cha.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "chi",
+        "location": "katakana-character-set/chi.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "cho",
+        "location": "katakana-character-set/cho.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "chu",
+        "location": "katakana-character-set/chu.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "da",
+        "location": "katakana-character-set/da.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "de",
+        "location": "katakana-character-set/de.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "do",
+        "location": "katakana-character-set/do.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "e",
+        "location": "katakana-character-set/e.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "fu",
+        "location": "katakana-character-set/fu.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ga",
+        "location": "katakana-character-set/ga.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ge",
+        "location": "katakana-character-set/ge.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "gi",
+        "location": "katakana-character-set/gi.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "go",
+        "location": "katakana-character-set/go.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "gu",
+        "location": "katakana-character-set/gu.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "gya",
+        "location": "katakana-character-set/gya.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "gyo",
+        "location": "katakana-character-set/gyo.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "gyu",
+        "location": "katakana-character-set/gyu.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ha",
+        "location": "katakana-character-set/ha.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "he",
+        "location": "katakana-character-set/he.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "hi",
+        "location": "katakana-character-set/hi.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ho",
+        "location": "katakana-character-set/ho.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "hya",
+        "location": "katakana-character-set/hya.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "hyo",
+        "location": "katakana-character-set/hyo.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "hyu",
+        "location": "katakana-character-set/hyu.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "i",
+        "location": "katakana-character-set/i.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ja",
+        "location": "katakana-character-set/ja.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ji",
+        "location": "katakana-character-set/ji.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ji2",
+        "location": "katakana-character-set/ji2.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "jo",
+        "location": "katakana-character-set/jo.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ju",
+        "location": "katakana-character-set/ju.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ka",
+        "location": "katakana-character-set/ka.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ke",
+        "location": "katakana-character-set/ke.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ki",
+        "location": "katakana-character-set/ki.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ko",
+        "location": "katakana-character-set/ko.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ku",
+        "location": "katakana-character-set/ku.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "kya",
+        "location": "katakana-character-set/kya.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "kyo",
+        "location": "katakana-character-set/kyo.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "kyu",
+        "location": "katakana-character-set/kyu.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ma",
+        "location": "katakana-character-set/ma.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "me",
+        "location": "katakana-character-set/me.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "mi",
+        "location": "katakana-character-set/mi.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "mo",
+        "location": "katakana-character-set/mo.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "mu",
+        "location": "katakana-character-set/mu.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "mya",
+        "location": "katakana-character-set/mya.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "myo",
+        "location": "katakana-character-set/myo.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "myu",
+        "location": "katakana-character-set/myu.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "n",
+        "location": "katakana-character-set/n.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "na",
+        "location": "katakana-character-set/na.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ne",
+        "location": "katakana-character-set/ne.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ni",
+        "location": "katakana-character-set/ni.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "no",
+        "location": "katakana-character-set/no.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "nu",
+        "location": "katakana-character-set/nu.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "nya",
+        "location": "katakana-character-set/nya.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "nyo",
+        "location": "katakana-character-set/nyo.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "nyu",
+        "location": "katakana-character-set/nyu.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "o",
+        "location": "katakana-character-set/o.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "pa",
+        "location": "katakana-character-set/pa.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "pe",
+        "location": "katakana-character-set/pe.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "pi",
+        "location": "katakana-character-set/pi.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "po",
+        "location": "katakana-character-set/po.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "pu",
+        "location": "katakana-character-set/pu.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "pya",
+        "location": "katakana-character-set/pya.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "pyo",
+        "location": "katakana-character-set/pyo.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "pyu",
+        "location": "katakana-character-set/pyu.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ra",
+        "location": "katakana-character-set/ra.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "re",
+        "location": "katakana-character-set/re.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ri",
+        "location": "katakana-character-set/ri.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ro",
+        "location": "katakana-character-set/ro.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ru",
+        "location": "katakana-character-set/ru.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "rya",
+        "location": "katakana-character-set/rya.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ryo",
+        "location": "katakana-character-set/ryo.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ryu",
+        "location": "katakana-character-set/ryu.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "sa",
+        "location": "katakana-character-set/sa.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "se",
+        "location": "katakana-character-set/se.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "sha",
+        "location": "katakana-character-set/sha.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "shi",
+        "location": "katakana-character-set/shi.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "sho",
+        "location": "katakana-character-set/sho.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "shu",
+        "location": "katakana-character-set/shu.png",
+		"category": "combinations",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "so",
+        "location": "katakana-character-set/so.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "su",
+        "location": "katakana-character-set/su.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ta",
+        "location": "katakana-character-set/ta.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "te",
+        "location": "katakana-character-set/te.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "to",
+        "location": "katakana-character-set/to.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "tsu",
+        "location": "katakana-character-set/tsu.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "u",
+        "location": "katakana-character-set/u.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "wa",
+        "location": "katakana-character-set/wa.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "wo",
+        "location": "katakana-character-set/wo.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ya",
+        "location": "katakana-character-set/ya.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "yo",
+        "location": "katakana-character-set/yo.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "yu",
+        "location": "katakana-character-set/yu.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "za",
+        "location": "katakana-character-set/za.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "ze",
+        "location": "katakana-character-set/ze.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "zo",
+        "location": "katakana-character-set/zo.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "zu",
+        "location": "katakana-character-set/zu.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    },
+    {
+        "name": "zu2",
+        "location": "katakana-character-set/zu2.png",
+		"category": "standard",
+        "syllabary": "katakana"
+    }
+]
