@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+body {
+  background-image: url(./assets/japan-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 95, 179, 0.37);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.center-parent {
+  /* margin-top: 33px; */
+  padding-top: 33px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.center-content {
+  max-width: 75%;
+  max-height: 90%;
+  border: 1px solid rgba(0,0,0,.125) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (prefers-color-scheme: dark) {
+  .invert-image {
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (prefers-color-scheme: light) {
+  .invert-image {
+    -webkit-filter: grayscale(0) invert(0);
+    filter: grayscale(0) invert(0);
   }
+}
+
+.card-footer {
+	background-color: rgba(0, 0, 0, 0.03);
+	border-top-color: rgba(140, 130, 115, 0.13);
+}
+
+.correct-color {
+  color: rgb(0, 255, 0);
+  font-weight: bold;
+}
+
+.wrong-color {
+  font-weight: bold;
+  color: red;
 }

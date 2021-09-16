@@ -24,3 +24,5 @@ yarn-error.log*
 
 *.code-workspace
 .eslintcache
+public/katakana-character-set-original
+public/hiragana-character-set-original
