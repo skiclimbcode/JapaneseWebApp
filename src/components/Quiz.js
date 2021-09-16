@@ -121,11 +121,6 @@ function Quiz(props) {
                             <span style={{ marginLeft: '5px' }}><span className="correct-color">{correct}</span> / {totalCharacters}</span>
                             <span style={{ marginLeft: '5px'}} className="wrong-color">{mistakes}</span>
                         </div>
-                        <div className="float-end">
-                        <Link to="/" className="remove-link-dec">
-                            <Button variant="secondary">Cancel</Button>
-                        </Link>
-                        </div>
                     </div>
                 </Form>
 
