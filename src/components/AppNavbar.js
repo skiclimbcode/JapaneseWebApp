@@ -10,7 +10,7 @@ export default function AppNavbar() {
         <Navbar bg="dark" fixed="top" variant="dark">
             <Container>
                 <Navbar.Brand as={Link} to="/" className="cursor-pointer">
-                    <img src="hiragana-character-set/a-logo.png" className="d-inline-block align-top invert-image" width="40" height="40" alt="logo" /> Learn Japanese
+                    <img src="hiragana-character-set/a-logo.png" className="d-inline-block align-top invert-image" width="40" height="40" alt="logo" /> Practice Syllabaries
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
