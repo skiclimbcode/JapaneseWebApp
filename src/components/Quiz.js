@@ -171,8 +171,7 @@ function Quiz(props) {
                             <span style={{ marginLeft: '5px'}}><span className="correct-color">{correct}</span> / {totalCharacters}</span>
                             <span style={{ marginLeft: '5px'}} className="wrong-color">{mistakes}</span>
                         </div>
-                        {
-                            isTimed &&
+                        {isTimed &&
                             <div style={{marginLeft: 'auto'}} className="stats-container">
                                 <Timer time={time} />
                                 <Button variant={isPaused ? 'success' : 'danger'} onClick={handlePauseResume}><TimerControls /></Button>

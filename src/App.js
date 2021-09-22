@@ -5,6 +5,7 @@ import Home from './components/Home';
 import { Card } from 'react-bootstrap';
 import Quiz from './components/Quiz';
 import Finish from './components/Finish';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
           </Switch>
         </Card>
       </div>
+      <Footer className="footer" />
     </Router>
   );
 }
