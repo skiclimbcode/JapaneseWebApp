@@ -11,4 +11,9 @@
 .stats-container {
     display: inline-flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+svg {
+    pointer-events: none;
 }

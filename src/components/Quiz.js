@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Alert, Button, Card, Form, Image } from 'react-bootstrap'
+import { PauseFill, PlayFill } from 'react-bootstrap-icons';
 import { Link, useHistory, withRouter } from 'react-router-dom'
 import './Quiz.css';
 import Timer from './Timer';
@@ -145,6 +146,10 @@ function Quiz(props) {
         setInput(event.target.value);
     };
 
+    const TimerControls = () => {
+        return isPaused ? <PlayFill /> : <PauseFill />
+    }
+
     return (
         <React.Fragment>
 
@@ -161,12 +166,18 @@ function Quiz(props) {
                         {wrong && <Alert variant={'danger'}>Wrong! Try again!</Alert>}
                     </Form.Group>
                     <div className="submit-container">
-                        <Button type="submit">Submit</Button>
+                        <Button variant="primary" type="submit" disabled={isPaused}>Submit</Button>
                         <div className="stats-container">
-                            <span style={{ marginLeft: '5px' }}><span className="correct-color">{correct}</span> / {totalCharacters}</span>
+                            <span style={{ marginLeft: '5px'}}><span className="correct-color">{correct}</span> / {totalCharacters}</span>
                             <span style={{ marginLeft: '5px'}} className="wrong-color">{mistakes}</span>
                         </div>
-                        {isTimed && <Timer time={time} />}
+                        {
+                            isTimed &&
+                            <div style={{marginLeft: 'auto'}} className="stats-container">
+                                <Timer time={time} />
+                                <Button variant={isPaused ? 'success' : 'danger'} onClick={handlePauseResume}><TimerControls /></Button>
+                            </div>
+                        }
                     </div>
                 </Form>
 
