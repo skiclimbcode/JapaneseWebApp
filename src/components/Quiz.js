@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { Alert, Button, Card, Form, Image } from 'react-bootstrap'
 import { Link, useHistory, withRouter } from 'react-router-dom'
 import './Quiz.css';
+import Timer from './Timer';
 
 function Quiz(props) {
-    const [syllabary] = useState('');
     const [useHiragana] = useState(props.location.state?.hiragana);
     const [useKatakana] = useState(props.location.state?.katakana);
     const [useCombinations] = useState(props.location.state?.combinations);
@@ -16,6 +16,44 @@ function Quiz(props) {
     const [correct, setCorrect] = useState(0);
     const history = useHistory();
     const [totalCharacters, setTotalCharacters] = useState(0);
+    const [isTimed] = useState(props.location.state?.isTimed);
+
+    //  START STOPWATCH
+    const [time, setTime] = useState(0);
+    const [isActive, setIsActive] = useState(false);
+    const [isPaused, setIsPaused] = useState(true);
+    const [times, setTimes] = useState([]);
+
+    useEffect(() => {
+        let interval = null;
+
+        if (isActive && !isPaused) {
+            interval = setInterval(() => {
+                setTime((time) =>  time + 10);
+            }, 10);
+        } else {
+            clearInterval(interval);
+        }
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, [isActive, isPaused]);
+
+    const handleStart = () => {
+        setIsActive(true);
+        setIsPaused(false);
+    };
+
+    const handlePauseResume = () => {
+        setIsPaused(!isPaused);
+    };
+
+    const handleReset = () => {
+        setIsActive(false);
+        setTime(0);
+    }
+    // END STOPWATCH
 
     const sanitize = (s) => {
         return s.toLowerCase().replace(/[0-9]/g, '')
@@ -31,6 +69,9 @@ function Quiz(props) {
             setWrong(false);
             setCharacters(characters.filter(character => character.name !== currentCharacter.name));
             setCorrect(correct + 1);
+            console.log('time:' , time);
+            setTimes([...times, time]);
+
         } else {
             console.log('Incorrect guess... it\'s', currentCharacter.name);
             setWrong(true);
@@ -67,7 +108,7 @@ function Quiz(props) {
         const goFinish = (correct, mistakes) => {
             history.push({
                 pathname: "/finish",
-                state: { correct: correct, mistakes: mistakes }
+                state: { correct: correct, mistakes: mistakes, times: times }
             })
         };
 
@@ -88,13 +129,17 @@ function Quiz(props) {
                 setCurrentCharacter(setRandomCharacter(characters));
             }
         }
-    }, [characters, history, correct, mistakes, wrong]);
+    }, [characters, history, correct, mistakes, wrong, times]);
 
     useEffect(() => {
         if (currentCharacter) {
             console.log('Current character is set:', currentCharacter.name, currentCharacter.syllabary);
+            if (isTimed) {
+                handleReset();
+                handleStart();
+            }
         }
-    }, [currentCharacter]);
+    }, [currentCharacter, isTimed]);
 
     const handleInputChange = (event) => {
         setInput(event.target.value);
@@ -103,7 +148,7 @@ function Quiz(props) {
     return (
         <React.Fragment>
 
-            <Card.Img as={Image} className="invert-image" fluid={true} src={currentCharacter?.location} alt={syllabary} />
+            <Card.Img as={Image} className="invert-image" fluid={true} src={currentCharacter?.location} alt={currentCharacter?.syllabary} />
 
             <Card.Body>
 
@@ -121,6 +166,7 @@ function Quiz(props) {
                             <span style={{ marginLeft: '5px' }}><span className="correct-color">{correct}</span> / {totalCharacters}</span>
                             <span style={{ marginLeft: '5px'}} className="wrong-color">{mistakes}</span>
                         </div>
+                        {isTimed && <Timer time={time} />}
                     </div>
                 </Form>
 

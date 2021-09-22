@@ -7,6 +7,7 @@ function Home() {
     const [combinations,  setChecked] = useState(false);
     const [hiragana, setHiragana] = useState(false);
     const [katakana, setKatakana] = useState(false);
+    const [isTimed, setIsTimed] = useState(false);
     const history = useHistory();
 
     const handleChecked = (e) => {
@@ -17,6 +18,8 @@ function Home() {
             break;
             case "katakana": setKatakana(e.currentTarget.checked);
             break;
+            case "timed": setIsTimed(e.currentTarget.checked);
+            break;
             default: // this should never happen
         }
     }
@@ -24,7 +27,7 @@ function Home() {
     const handleStart = () => {
         history.push({
             pathname: "/quiz",
-            state: { hiragana: hiragana, katakana: katakana, combinations: combinations }
+            state: { hiragana: hiragana, katakana: katakana, combinations: combinations, isTimed: isTimed }
         })
     }
 
@@ -43,6 +46,7 @@ function Home() {
                             <Form.Check id="hiragana" checked={hiragana} onChange={handleChecked} type="checkbox" label="Hiragana"/>
                             <Form.Check id="katakana" checked={katakana} onChange={handleChecked} type="checkbox" label="Katakana"/>
                             <Form.Check id="combo" checked={combinations} onChange={handleChecked} type="checkbox" label="Combinations (e.g. きゃ)"/>
+                            <Form.Check id="timed" checked={isTimed} onChange={handleChecked} type="checkbox" label="Timed"/>
                         </Form>
                     </Col>
                     <Col xs={12}>

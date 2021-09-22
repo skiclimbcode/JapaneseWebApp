@@ -3,15 +3,17 @@ import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router';
 import './Finish.css'
+import Timer from './Timer';
 
 function Finish(props) {
     const [correct] = useState(props.location.state?.correct);
     const [mistakes] = useState(props.location.state?.mistakes);
+    const [times] = useState(props.location.state?.times);
     return (
-        <Card.Body>
+        <Card.Body className="card-size">
             <Card.Title>All done!</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">Here are some stats.</Card.Subtitle>
-            <Container>
+            <Container fluid>
                 <Row>
                     <Col>
                         Correct:
@@ -34,6 +36,14 @@ function Finish(props) {
                     </Col>
                     <Col>
                         <span className="float-end" style={{fontWeight: 'bold'}}>{correct - mistakes}</span>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        Avg Time:
+                    </Col>
+                    <Col>
+                        <span className="float-end"><Timer time={times?.reduce((a, b) => a + b) / times?.length}/></span>
                     </Col>
                 </Row>
                 <br />
