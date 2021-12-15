@@ -1,0 +1,11 @@
+@media (prefers-color-scheme: light) {
+    .table-text-color {
+        color: black !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .table-text-color {
+        color: white !important;
+    }
+}

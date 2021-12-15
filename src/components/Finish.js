@@ -5,43 +5,55 @@ import { withRouter } from 'react-router';
 import './Finish.css'
 import Timer from './Timer';
 import { HouseDoorFill } from 'react-bootstrap-icons';
+import ls from 'local-storage'
+import { getCurrentDate } from '../utils/Util';
 
 const average = (list) => list?.reduce((a, b) => a + b) / list?.length;
 
 const add = (list) => list?.reduce((a, b) => a + b);
 
-const buildResults = (correct, mistakes, times) => {
-    return {
-        'mistakes': mistakes,
-        'correct': correct,
-        'average': average(times),
-        'score': correct - mistakes,
-        'totalTime': add(times),
-        'date': Date()
-    };
-};
+const buildResults = (correct, mistakes, times, combinations, syllabary) =>
+    new Result(correct, mistakes, average(times), correct - mistakes,
+        add(times), getCurrentDate(), combinations, syllabary);
+
+class Result {
+    mistakes;
+    correct;
+    average;
+    score;
+    totalTime;
+    date;
+    combinations;
+    syllabary;
+
+    constructor(correct, mistakes, average, score, totalTime, date, combinations, syllabary) {
+        this.correct = correct;
+        this.mistakes = mistakes;
+        this.average = average;
+        this.score = score;
+        this.totalTime = totalTime;
+        this.date = date;
+        this.combinations = combinations;
+        this.syllabary = syllabary;
+    }
+}
 
 
 function Finish(props) {
     const [correct] = useState(props.location.state?.correct);
     const [mistakes] = useState(props.location.state?.mistakes);
     const [times] = useState(props.location.state?.times);
-    const [results, setResults] = useState({});
+    const [usedCombinations] = useState(props.location.state?.combinations);
+    const [syllabary] = useState(props.location.state?.syllabary);
     const [isTimed, setIsTimed] = useState(true);
 
     useEffect(() =>  {
         console.log('correct mistakes times:', correct, mistakes, times);
-        setResults(buildResults(correct, mistakes, times));
+        ls(getCurrentDate(), buildResults(correct, mistakes, times, usedCombinations, syllabary));
         times.forEach(time => {
             if (time === 0) setIsTimed(false);
         })
-    }, [correct, mistakes, times, isTimed]);
-
-    useEffect(() => {
-        if (Object.keys(results).length > 0) {
-            console.log('results:', results);
-        }
-    }, [results]);
+    }, [correct, mistakes, times, isTimed, usedCombinations, syllabary]);
 
     return (
         <Card.Body className="card-size">

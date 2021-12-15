@@ -13,6 +13,11 @@ export default function AppNavbar() {
                     <img src="hiragana-character-set/a-logo.png" className="d-inline-block align-top invert-image" width="40" height="40" alt="logo" /> Practice Syllabaries
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Nav.Link as={Link} to="/results">Results</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
             </Container>
         </Navbar>
     )

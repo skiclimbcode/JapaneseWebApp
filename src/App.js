@@ -6,6 +6,7 @@ import { Card } from 'react-bootstrap';
 import Quiz from './components/Quiz';
 import Finish from './components/Finish';
 import Footer from './components/Footer';
+import Results from './components/Results';
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="/finish">
               <Finish />
+            </Route>
+            <Route path="/results">
+              <Results />
             </Route>
             <Route exact path="/">
               <Home />

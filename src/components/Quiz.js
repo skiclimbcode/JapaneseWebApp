@@ -110,7 +110,8 @@ function Quiz(props) {
         const goFinish = (correct, mistakes) => {
             history.push({
                 pathname: "/finish",
-                state: { correct: correct, mistakes: mistakes, times: times }
+                state: {combinations: useCombinations,
+                    syllabary: useHiragana && useKatakana ? 'Both' : (useHiragana && !useKatakana ? 'Hiragana' : 'Katakana'), correct: correct, mistakes: mistakes, times: times }
             })
         };
 
@@ -131,7 +132,7 @@ function Quiz(props) {
                 setCurrentCharacter(setRandomCharacter(characters));
             }
         }
-    }, [characters, history, correct, mistakes, wrong, times]);
+    }, [characters, history, correct, mistakes, wrong, times, useCombinations, useHiragana, useKatakana]);
 
     useEffect(() => {
         if (currentCharacter) {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
+import ls from 'local-storage'
 import './Home.css'
 
 function Home() {
@@ -31,6 +32,10 @@ function Home() {
         })
     }
 
+    const handleClear = () => {
+        ls.clear();
+    }
+
     return (
         <Card.Body>
             <Card.Title>Japanese Syllabaries Quiz</Card.Title>
@@ -51,6 +56,9 @@ function Home() {
                     </Col>
                     <Col xs={12}>
                         <Button onClick={handleStart} disabled={!hiragana && !katakana} variant="primary">Start</Button>
+                    </Col>
+                    <Col xs={12}>
+                        <Button onClick={handleClear} variant="primary">Clear</Button>
                     </Col>
                 </Row>
             </Container>
