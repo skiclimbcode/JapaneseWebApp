@@ -14,7 +14,7 @@ function App() {
       <AppNavbar />
 
       <div className="center-parent">
-        <Card className="center-content card-size" text="light" bg="dark" border="dark">
+        <Card className="card-overflow center-content card-size" text="light" bg="dark" border="dark">
           <Switch>
             <Route path="/quiz">
               <Quiz />

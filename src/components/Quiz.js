@@ -96,6 +96,7 @@ function Quiz(props) {
                     if (!combinations)  {
                         list = list.filter(char => char.category !== 'combinations');
                     }
+                    list = testData();
                     setCharacters(list);
                     setTotalCharacters(list.length);
                 });
@@ -150,10 +151,29 @@ function Quiz(props) {
         return isPaused ? <PlayFill /> : <PauseFill />
     }
 
+    const testData = () => {
+        return [{
+            "name": "wa",
+            "location": "hiragana-character-set/wa.png",
+            "category": "standard",
+            "syllabary": "hiragana"
+        },     {
+            "name": "wa3",
+            "location": "hiragana-character-set/wa.png",
+            "category": "standard",
+            "syllabary": "hiragana"
+        },     {
+            "name": "wa2",
+            "location": "hiragana-character-set/wa.png",
+            "category": "standard",
+            "syllabary": "hiragana"
+        }]
+    }
+
     return (
         <React.Fragment>
 
-            <Card.Img as={Image} className="invert-image" fluid={true} src={currentCharacter?.location} alt={currentCharacter?.syllabary} />
+            <Card.Img as={Image} className="invert-image image-resize" fluid={true} src={currentCharacter?.location} alt={currentCharacter?.syllabary} />
 
             <Card.Body>
 
@@ -162,11 +182,11 @@ function Quiz(props) {
 
                 <Form noValidate onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="validationInput">
-                        <Form.Control autoComplete="off" onChange={handleInputChange} value={input} type="text" placeholder="Romaji" />
+                        <Form.Control autoFocus autoComplete="off" onChange={handleInputChange} value={input} type="text" placeholder="Romaji" />
                         {wrong && <Alert variant={'danger'}>Wrong! Try again!</Alert>}
                     </Form.Group>
                     <div className="submit-container">
-                        <Button variant="primary" type="submit" disabled={isPaused}>Submit</Button>
+                        <Button variant="primary" type="submit" disabled={isTimed && isPaused}>Submit</Button>
                         <div className="stats-container">
                             <span style={{ marginLeft: '5px'}}><span className="correct-color">{correct}</span> / {totalCharacters}</span>
                             <span style={{ marginLeft: '5px'}} className="wrong-color">{mistakes}</span>

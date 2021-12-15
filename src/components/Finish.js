@@ -1,14 +1,48 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router';
 import './Finish.css'
 import Timer from './Timer';
+import { HouseDoorFill } from 'react-bootstrap-icons';
+
+const average = (list) => list?.reduce((a, b) => a + b) / list?.length;
+
+const add = (list) => list?.reduce((a, b) => a + b);
+
+const buildResults = (correct, mistakes, times) => {
+    return {
+        'mistakes': mistakes,
+        'correct': correct,
+        'average': average(times),
+        'score': correct - mistakes,
+        'totalTime': add(times),
+        'date': Date()
+    };
+};
+
 
 function Finish(props) {
     const [correct] = useState(props.location.state?.correct);
     const [mistakes] = useState(props.location.state?.mistakes);
     const [times] = useState(props.location.state?.times);
+    const [results, setResults] = useState({});
+    const [isTimed, setIsTimed] = useState(true);
+
+    useEffect(() =>  {
+        console.log('correct mistakes times:', correct, mistakes, times);
+        setResults(buildResults(correct, mistakes, times));
+        times.forEach(time => {
+            if (time === 0) setIsTimed(false);
+        })
+    }, [correct, mistakes, times, isTimed]);
+
+    useEffect(() => {
+        if (Object.keys(results).length > 0) {
+            console.log('results:', results);
+        }
+    }, [results]);
+
     return (
         <Card.Body className="card-size">
             <Card.Title>All done!</Card.Title>
@@ -38,18 +72,29 @@ function Finish(props) {
                         <span className="float-end" style={{fontWeight: 'bold'}}>{correct - mistakes}</span>
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
-                        Avg Time:
-                    </Col>
-                    <Col>
-                        <span className="float-end"><Timer time={times?.reduce((a, b) => a + b) / times?.length}/></span>
-                    </Col>
-                </Row>
+                {isTimed &&
+                <>
+                    <Row>
+                        <Col>
+                            Avg Time:
+                        </Col>
+                        <Col>
+                            <span className="float-end"><Timer time={average(times)}/></span>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            Total Time:
+                        </Col>
+                        <Col>
+                            <span className="float-end"><Timer time={add(times)} /></span>
+                        </Col>
+                    </Row>
+                </>}
                 <br />
                 <Row>
                     <Col xs={12} className="text-center">
-                        <Link to="/" className="remove-link-dec"><Button variant="primary">Start Over</Button></Link>
+                        <Link to="/" className="remove-link-dec"><Button variant="primary"><HouseDoorFill /> Home</Button></Link>
                     </Col>
                 </Row>
             </Container>

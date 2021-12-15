@@ -8,8 +8,6 @@ body {
 }
 
 .center-parent {
-  /* margin-top: 33px; */
-  padding-top: 33px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,6 +27,11 @@ body {
   left: 0;
   right: 0;
   height: 50px;
+}
+
+.card-overflow {
+  max-height: 80%;
+  overflow: auto;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,12 +1,11 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap'
-import { CupFill, Github, Wallet2 } from 'react-bootstrap-icons'
+import { CupFill, Github } from 'react-bootstrap-icons'
 import './Footer.css'
 
 function Footer() {
     return (
         <footer className="footer mt-auto py-3 bg-dark text-white">
-            <div class="footer-container">
+            <div className="footer-container">
                 <div>
                     © SkiClimbCode -
                 </div>
