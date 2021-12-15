@@ -57,9 +57,9 @@ function Home() {
                     <Col xs={12}>
                         <Button onClick={handleStart} disabled={!hiragana && !katakana} variant="primary">Start</Button>
                     </Col>
-                    <Col xs={12}>
+                    {/* <Col xs={12}>
                         <Button onClick={handleClear} variant="primary">Clear</Button>
-                    </Col>
+                    </Col> */}
                 </Row>
             </Container>
         </Card.Body>
