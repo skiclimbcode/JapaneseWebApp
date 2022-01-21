@@ -12,9 +12,9 @@ const average = (list) => list?.reduce((a, b) => a + b) / list?.length;
 
 const add = (list) => list?.reduce((a, b) => a + b);
 
-const buildResults = (correct, mistakes, times, combinations, syllabary) =>
+const buildResults = (correct, mistakes, times, combinations, useHiragana, useKatakana) =>
     new Result(correct, mistakes, average(times), correct - mistakes,
-        add(times), getCurrentDate(), combinations, syllabary);
+        add(times), getCurrentDate(), combinations, useHiragana, useKatakana);
 
 class Result {
     mistakes;
@@ -24,9 +24,11 @@ class Result {
     totalTime;
     date;
     combinations;
+    useHiragana;
+    useKatakana;
     syllabary;
 
-    constructor(correct, mistakes, average, score, totalTime, date, combinations, syllabary) {
+    constructor(correct, mistakes, average, score, totalTime, date, combinations, useHiragana, useKatakana) {
         this.correct = correct;
         this.mistakes = mistakes;
         this.average = average;
@@ -34,7 +36,9 @@ class Result {
         this.totalTime = totalTime;
         this.date = date;
         this.combinations = combinations;
-        this.syllabary = syllabary;
+        this.useHiragana = useHiragana;
+        this.useKatakana = useKatakana;
+        this.syllabary = "";
     }
 }
 
@@ -44,16 +48,17 @@ function Finish(props) {
     const [mistakes] = useState(props.location.state?.mistakes);
     const [times] = useState(props.location.state?.times);
     const [usedCombinations] = useState(props.location.state?.combinations);
-    const [syllabary] = useState(props.location.state?.syllabary);
+    const [useHiragana] = useState(props.location.state?.hiragana);
+    const [useKatakana] = useState(props.location.state?.katakana);
     const [isTimed, setIsTimed] = useState(true);
 
     useEffect(() =>  {
         console.log('correct mistakes times:', correct, mistakes, times);
-        ls(getCurrentDate(), buildResults(correct, mistakes, times, usedCombinations, syllabary));
+        ls(getCurrentDate(), buildResults(correct, mistakes, times, usedCombinations, useHiragana, useKatakana));
         times.forEach(time => {
             if (time === 0) setIsTimed(false);
         })
-    }, [correct, mistakes, times, isTimed, usedCombinations, syllabary]);
+    }, [correct, mistakes, times, isTimed, usedCombinations, useHiragana, useKatakana]);
 
     return (
         <Card.Body className="card-size">

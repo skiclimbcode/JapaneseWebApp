@@ -96,7 +96,7 @@ function Quiz(props) {
                     if (!combinations)  {
                         list = list.filter(char => char.category !== 'combinations');
                     }
-                    list = testData();
+                    // list = testData();
                     setCharacters(list);
                     setTotalCharacters(list.length);
                 });
@@ -110,8 +110,14 @@ function Quiz(props) {
         const goFinish = (correct, mistakes) => {
             history.push({
                 pathname: "/finish",
-                state: {combinations: useCombinations,
-                    syllabary: useHiragana && useKatakana ? 'Both' : (useHiragana && !useKatakana ? 'Hiragana' : 'Katakana'), correct: correct, mistakes: mistakes, times: times }
+                state: {
+                    combinations: useCombinations,
+                    hiragana: useHiragana,
+                    katakana: useKatakana,
+                    correct: correct,
+                    mistakes: mistakes,
+                    times: times
+                }
             })
         };
 

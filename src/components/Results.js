@@ -8,7 +8,7 @@ import { convertToSeconds } from '../utils/Util';
 
 function Results() {
     const [all, setAll] = useState(true);
-    const [combinations,  setChecked] = useState(false);
+    const [combinations, setCombinations] = useState(false);
     const [hiragana, setHiragana] = useState(false);
     const [katakana, setKatakana] = useState(false);
     const [data, setData] = useState([]);
@@ -16,7 +16,7 @@ function Results() {
     const handleChecked = (e) => {
         switch (e.currentTarget.id) {
             case "combo":
-                setChecked(e.currentTarget.checked);
+            setCombinations(e.currentTarget.checked);
                 setAll(false);
             break;
             case "hiragana":
@@ -29,7 +29,7 @@ function Results() {
             break;
             case "all":
                 setAll(e.currentTarget.checked);
-                setChecked(false);
+            setCombinations(false);
                 setHiragana(false);
                 setKatakana(false);
             break;
@@ -77,45 +77,36 @@ function Results() {
 
     useEffect(() => {
         console.log('hi there!');
+        if (hiragana && katakana && combinations) {
+            setAll(true);
+            setHiragana(false);
+            setKatakana(false);
+            setCombinations(false);
+        }
+
         if (!hiragana && !katakana) {
-            setChecked(false);
+            setCombinations(false);
         }
         setData(Object.keys(ls.getStorage())
-        .filter(key => {
-            let result = ls.get(key);
-            if (all) {
-                return true;
-            }
-            if (hiragana) {
-                if (result.syllabary === 'Both' || result.syllabary === 'Hiragana') {
-                    if (result.combinations) {
-                        if (combinations) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    }
+            .filter(key => {
+                let result = ls.get(key);
+                if (all) {
                     return true;
+                } else if (hiragana) {
+                    return combinations ? (result.combinations && result.useHiragana) : (!result.combinations && result.useHiragana);
+                } else if (katakana) {
+                    return combinations ? (result.combinations && result.useKatakana) : (!result.combinations && result.useKatakana);
                 }
-            }
-            if (katakana) {
-                if (result.syllabary === 'Both' || result.syllabary === 'Katakana') {
-                    if (result.combinations) {
-                        if (combinations) {
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    }
-                    return true;
-                }
-            }
-            return false;
-        })
-        .map(key => {
+                return false;
+        }).map(key => {
             let result = ls.get(key);
             result.average = result.average === 0 ? 'N/A' : convertToSeconds(result.average);
             result.totalTime = result.totalTime === 0 ? 'N/A' : convertToSeconds(result.totalTime);
+            if (result.useKatakana && result.useHiragana) {
+                result.syllabary = "Hiragana & Katakana";
+            } else {
+                result.syllabary = result.useHiragana ? "Hiragana" : "Katakana";
+            }
             return result;
         }));
     }, [all, combinations, hiragana, katakana]);
