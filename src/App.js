@@ -5,6 +5,8 @@ import Home from './components/Home';
 import { Card } from 'react-bootstrap';
 import Quiz from './components/Quiz';
 import Finish from './components/Finish';
+import Footer from './components/Footer';
+import Results from './components/Results';
 
 function App() {
 
@@ -13,20 +15,23 @@ function App() {
       <AppNavbar />
 
       <div className="center-parent">
-        <Card className="center-content" text="light" bg="dark" border="dark">
+        <Card className="card-overflow center-content card-size" text="light" bg="dark" border="dark">
           <Switch>
             <Route path="/quiz">
               <Quiz />
             </Route>
 
             <Route path="/hiragana">
-              {/* <Quiz syllabary="Hiragana" /> */}
+              
             </Route>
             <Route path="/katakana">
-              {/* <Quiz syllabary="Katakana" /> */}
+              
             </Route>
             <Route path="/finish">
               <Finish />
+            </Route>
+            <Route path="/results">
+              <Results />
             </Route>
             <Route exact path="/">
               <Home />
@@ -34,6 +39,7 @@ function App() {
           </Switch>
         </Card>
       </div>
+      <Footer className="footer" />
     </Router>
   );
 }

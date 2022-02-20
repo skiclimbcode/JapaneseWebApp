@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
+import ls from 'local-storage'
 import './Home.css'
 
 function Home() {
     const [combinations,  setChecked] = useState(false);
     const [hiragana, setHiragana] = useState(false);
     const [katakana, setKatakana] = useState(false);
+    const [isTimed, setIsTimed] = useState(false);
     const history = useHistory();
 
     const handleChecked = (e) => {
@@ -17,6 +19,8 @@ function Home() {
             break;
             case "katakana": setKatakana(e.currentTarget.checked);
             break;
+            case "timed": setIsTimed(e.currentTarget.checked);
+            break;
             default: // this should never happen
         }
     }
@@ -24,8 +28,12 @@ function Home() {
     const handleStart = () => {
         history.push({
             pathname: "/quiz",
-            state: { hiragana: hiragana, katakana: katakana, combinations: combinations }
+            state: { hiragana: hiragana, katakana: katakana, combinations: combinations, isTimed: isTimed }
         })
+    }
+
+    const handleClear = () => {
+        ls.clear();
     }
 
     return (
@@ -43,11 +51,15 @@ function Home() {
                             <Form.Check id="hiragana" checked={hiragana} onChange={handleChecked} type="checkbox" label="Hiragana"/>
                             <Form.Check id="katakana" checked={katakana} onChange={handleChecked} type="checkbox" label="Katakana"/>
                             <Form.Check id="combo" checked={combinations} onChange={handleChecked} type="checkbox" label="Combinations (e.g. きゃ)"/>
+                            <Form.Check id="timed" checked={isTimed} onChange={handleChecked} type="checkbox" label="Timed"/>
                         </Form>
                     </Col>
                     <Col xs={12}>
                         <Button onClick={handleStart} disabled={!hiragana && !katakana} variant="primary">Start</Button>
                     </Col>
+                    {/* <Col xs={12}>
+                        <Button onClick={handleClear} variant="primary">Clear</Button>
+                    </Col> */}
                 </Row>
             </Container>
         </Card.Body>

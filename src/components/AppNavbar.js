@@ -7,7 +7,7 @@ import { Container, Nav } from 'react-bootstrap'
 export default function AppNavbar() {
 
     return (
-        <Navbar bg="dark" fixed="top" variant="dark">
+        <Navbar className="remove-padding" bg="dark" fixed="top" variant="dark">
             <Container>
                 <Navbar.Brand as={Link} to="/" className="cursor-pointer">
                     <img src="hiragana-character-set/a-logo.png" className="d-inline-block align-top invert-image" width="40" height="40" alt="logo" /> Practice Syllabaries
@@ -15,8 +15,7 @@ export default function AppNavbar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link as={Link} to="/hiragana">Hiragana</Nav.Link>
-                        <Nav.Link as={Link} to="/katakana">Katakana</Nav.Link>
+                        <Nav.Link as={Link} to="/results">Results</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

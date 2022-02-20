@@ -8,8 +8,6 @@ body {
 }
 
 .center-parent {
-  /* margin-top: 33px; */
-  padding-top: 33px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +19,19 @@ body {
   max-width: 75%;
   max-height: 90%;
   border: 1px solid rgba(0,0,0,.125) !important;
+}
+
+.footer {
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+
+.card-overflow {
+  max-height: 80%;
+  overflow: auto;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,4 +61,8 @@ body {
 .wrong-color {
   font-weight: bold;
   color: red;
+}
+
+.card-size {
+	min-width: 25% !important;
 }
