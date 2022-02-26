@@ -17,23 +17,23 @@ function App() {
       <div className="center-parent">
         <Card className="card-overflow center-content card-size" text="light" bg="dark" border="dark">
           <Switch>
-            <Route path="/quiz">
+            <Route path="/JapaneseWebApp/quiz">
               <Quiz />
             </Route>
 
-            <Route path="/hiragana">
+            <Route path="/JapaneseWebApp/hiragana">
               
             </Route>
-            <Route path="/katakana">
+            <Route path="/JapaneseWebApp/katakana">
               
             </Route>
-            <Route path="/finish">
+            <Route path="/JapaneseWebApp/finish">
               <Finish />
             </Route>
-            <Route path="/results">
+            <Route path="/JapaneseWebApp/results">
               <Results />
             </Route>
-            <Route exact path="/">
+            <Route exact path="/JapaneseWebApp">
               <Home />
             </Route>
           </Switch>
