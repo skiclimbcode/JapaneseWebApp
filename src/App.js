@@ -11,29 +11,29 @@ import Results from './components/Results';
 function App() {
 
   return (
-    <Router>
+    <Router basename='/JapaneseWebApp'>
       <AppNavbar />
 
       <div className="center-parent">
         <Card className="card-overflow center-content card-size" text="light" bg="dark" border="dark">
           <Switch>
-            <Route path="/JapaneseWebApp/quiz">
+            <Route path="/quiz">
               <Quiz />
             </Route>
 
-            <Route path="/JapaneseWebApp/hiragana">
+            <Route path="/hiragana">
               
             </Route>
-            <Route path="/JapaneseWebApp/katakana">
+            <Route path="/katakana">
               
             </Route>
-            <Route path="/JapaneseWebApp/finish">
+            <Route path="/finish">
               <Finish />
             </Route>
-            <Route path="/JapaneseWebApp/results">
+            <Route path="/results">
               <Results />
             </Route>
-            <Route exact path="/JapaneseWebApp">
+            <Route exact path="/">
               <Home />
             </Route>
           </Switch>
