@@ -64,17 +64,13 @@ function Quiz(props) {
         event.preventDefault();
         if (!input || input.length === 0) { return; }
 
-        console.log('current input:', input);
         if (sanitize(input) === sanitize(currentCharacter.name)) {
-            console.log('Correct guess!');
             setWrong(false);
             setCharacters(characters.filter(character => character.name !== currentCharacter.name));
             setCorrect(correct + 1);
-            console.log('time:' , time);
             setTimes([...times, time]);
 
         } else {
-            console.log('Incorrect guess... it\'s', currentCharacter.name);
             setWrong(true);
             setMistakes(mistakes + 1);
         }
@@ -101,7 +97,6 @@ function Quiz(props) {
                     setTotalCharacters(list.length);
                 });
         };
-        console.log(`Fetching character set(s)...`);
         loadCharacters(useHiragana, useKatakana, useCombinations);
     }, [useHiragana, useKatakana, useCombinations]);
 
@@ -134,7 +129,6 @@ function Quiz(props) {
                 return Math.floor(Math.random() * chars.length);
             }
             if (!wrong) {
-                console.log('Setting current character...');
                 setCurrentCharacter(setRandomCharacter(characters));
             }
         }
@@ -142,7 +136,6 @@ function Quiz(props) {
 
     useEffect(() => {
         if (currentCharacter) {
-            console.log('Current character is set:', currentCharacter.name, currentCharacter.syllabary);
             if (isTimed) {
                 handleReset();
                 handleStart();

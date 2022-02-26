@@ -53,7 +53,6 @@ function Finish(props) {
     const [isTimed, setIsTimed] = useState(true);
 
     useEffect(() =>  {
-        console.log('correct mistakes times:', correct, mistakes, times);
         ls(getCurrentDate(), buildResults(correct, mistakes, times, usedCombinations, useHiragana, useKatakana));
         times.forEach(time => {
             if (time === 0) setIsTimed(false);

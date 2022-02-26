@@ -76,7 +76,6 @@ function Results() {
     });
 
     useEffect(() => {
-        console.log('hi there!');
         if (hiragana && katakana && combinations) {
             setAll(true);
             setHiragana(false);
