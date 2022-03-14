@@ -12,9 +12,6 @@ function Footer() {
                 <div>
                     <Github /> <a className="remove-underline-color" href="https://www.github.com/SkiClimbCode">GitHub</a>
                 </div>
-                <div>
-                    <CupFill /> <a className="remove-underline-color" href="https://www.github.com/SkiClimbCode">Buy me a coffee :)</a>
-                </div>
                 <div className="pull-right">
                     <a href="https://www.freepik.com/vectors/building">Building vector created by pikisuperstar - www.freepik.com</a>
                 </div>
